@@ -1,0 +1,5 @@
+C:\Users\ester.santos\source\repos\ProductCRUD\Produto\obj\Debug\netcoreapp2.2\Produto.csprojAssemblyReference.cache
+C:\Users\ester.santos\source\repos\ProductCRUD\Produto\obj\Debug\netcoreapp2.2\Produto.RazorAssemblyInfo.cache
+C:\Users\ester.santos\source\repos\ProductCRUD\Produto\obj\Debug\netcoreapp2.2\Produto.RazorAssemblyInfo.cs
+C:\Users\ester.santos\source\repos\ProductCRUD\Produto\obj\Debug\netcoreapp2.2\Produto.AssemblyInfoInputs.cache
+C:\Users\ester.santos\source\repos\ProductCRUD\Produto\obj\Debug\netcoreapp2.2\Produto.AssemblyInfo.cs

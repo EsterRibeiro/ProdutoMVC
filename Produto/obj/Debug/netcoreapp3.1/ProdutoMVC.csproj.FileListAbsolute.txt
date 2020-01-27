@@ -1,0 +1,7 @@
+C:\Users\ester.santos\source\repos\ProductCRUD\Produto\obj\Debug\netcoreapp3.1\ProdutoMVC.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ester.santos\source\repos\ProductCRUD\Produto\obj\Debug\netcoreapp3.1\ProdutoMVC.AssemblyInfoInputs.cache
+C:\Users\ester.santos\source\repos\ProductCRUD\Produto\obj\Debug\netcoreapp3.1\ProdutoMVC.AssemblyInfo.cs
+C:\Users\ester.santos\source\repos\ProductCRUD\Produto\obj\Debug\netcoreapp3.1\ProdutoMVC.TagHelpers.input.cache
+C:\Users\ester.santos\source\repos\ProductCRUD\Produto\obj\Debug\netcoreapp3.1\ProdutoMVC.TagHelpers.output.cache
+C:\Users\ester.santos\source\repos\ProductCRUD\Produto\obj\Debug\netcoreapp3.1\ProdutoMVC.dll
+C:\Users\ester.santos\source\repos\ProductCRUD\Produto\obj\Debug\netcoreapp3.1\ProdutoMVC.pdb
