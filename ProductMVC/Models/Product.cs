@@ -8,15 +8,15 @@ namespace ProductMVC.Models
 {
     public class Product
     {
-        //public Product(int id, string nome, string fabricante, string codigoBarras, decimal preco, int estoque)
-        //{
-        //    Id = id;
-        //    Nome = nome;
-        //    Fabricante = fabricante;
-        //    CodigoBarras = codigoBarras;
-        //    Preco = preco;
-        //    Estoque = estoque;
-        //}
+        public Product(int id, string nome, string fabricante, string codigoBarras, decimal preco, int estoque)
+        {
+            Id = id;
+            Nome = nome;
+            Fabricante = fabricante;
+            CodigoBarras = codigoBarras;
+            Preco = preco;
+            Estoque = estoque;
+        }
 
         //public ou protected nesse caso?
         public Product() { }

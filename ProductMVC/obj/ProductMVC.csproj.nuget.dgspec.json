@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ester.santos\\source\\repos\\ProjectWeb\\ProductMVC\\ProductMVC.csproj": {}
+    "C:\\Users\\ester.santos\\source\\repos\\ProductCRUD\\ProductMVC\\ProductMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ester.santos\\source\\repos\\ProjectWeb\\ProductMVC\\ProductMVC.csproj": {
+    "C:\\Users\\ester.santos\\source\\repos\\ProductCRUD\\ProductMVC\\ProductMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ester.santos\\source\\repos\\ProjectWeb\\ProductMVC\\ProductMVC.csproj",
+        "projectUniqueName": "C:\\Users\\ester.santos\\source\\repos\\ProductCRUD\\ProductMVC\\ProductMVC.csproj",
         "projectName": "ProductMVC",
-        "projectPath": "C:\\Users\\ester.santos\\source\\repos\\ProjectWeb\\ProductMVC\\ProductMVC.csproj",
+        "projectPath": "C:\\Users\\ester.santos\\source\\repos\\ProductCRUD\\ProductMVC\\ProductMVC.csproj",
         "packagesPath": "C:\\Users\\ester.santos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ester.santos\\source\\repos\\ProjectWeb\\ProductMVC\\obj\\",
+        "outputPath": "C:\\Users\\ester.santos\\source\\repos\\ProductCRUD\\ProductMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
