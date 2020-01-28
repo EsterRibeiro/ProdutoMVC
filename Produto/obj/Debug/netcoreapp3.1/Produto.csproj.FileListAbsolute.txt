@@ -1,8 +1,0 @@
-C:\Users\ester.santos\source\repos\ProductCRUD\Produto\obj\Debug\netcoreapp3.1\Produto.csprojAssemblyReference.cache
-C:\Users\ester.santos\source\repos\ProductCRUD\Produto\obj\Debug\netcoreapp3.1\Produto.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\ester.santos\source\repos\ProductCRUD\Produto\obj\Debug\netcoreapp3.1\Produto.AssemblyInfoInputs.cache
-C:\Users\ester.santos\source\repos\ProductCRUD\Produto\obj\Debug\netcoreapp3.1\Produto.AssemblyInfo.cs
-C:\Users\ester.santos\source\repos\ProductCRUD\Produto\obj\Debug\netcoreapp3.1\Produto.TagHelpers.input.cache
-C:\Users\ester.santos\source\repos\ProductCRUD\Produto\obj\Debug\netcoreapp3.1\Produto.TagHelpers.output.cache
-C:\Users\ester.santos\source\repos\ProductCRUD\Produto\obj\Debug\netcoreapp3.1\Produto.dll
-C:\Users\ester.santos\source\repos\ProductCRUD\Produto\obj\Debug\netcoreapp3.1\Produto.pdb
