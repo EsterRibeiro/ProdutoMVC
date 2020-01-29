@@ -69,11 +69,14 @@ namespace ProductMVC.Repository
 
         }
 
-
+        /// <summary>
+        /// Cria os produtos
+        /// </summary>
+        /// <param name="prod"></param>
         public void CreateProduct(Product prod)
         {
 
-           
+
             //usando a string de conexão
             using (var connection = new SqlConnection(stringconn))
             {
@@ -93,7 +96,7 @@ namespace ProductMVC.Repository
                 command.Parameters.AddWithValue("@Preco", prod.Preco);
                 command.Parameters.AddWithValue("@Estoque", prod.Estoque);
 
-                
+
 
                 try
                 {
@@ -102,7 +105,8 @@ namespace ProductMVC.Repository
                     command.ExecuteNonQuery();
 
 
-                }catch(Exception ex)
+                }
+                catch (Exception ex)
                 {
                     throw ex;
                 }
@@ -118,9 +122,51 @@ namespace ProductMVC.Repository
 
         }
 
-        public void UpdateProduct(int id) { }
+        /// <summary>
+        /// Altera os produtos
+        /// </summary>
+        /// <param name="prod"></param>
+        public void UpdateProduct(Product prod)
+        {
+            using (var connection = new SqlConnection(stringconn))
+            {
+                string query = "UPDATE Produto " +
+                    "set Nome_Produto = @Nome_Produto, Fabricante = @Fabricante, CodigoBarras = @CodigoBarras, Preco = @Preco, Estoque = @Estoque";
 
-        public void DeleteProduct(Product prod) 
+                SqlCommand command = new SqlCommand(query, connection);
+
+                command.CommandType = new CommandType();
+
+                command.Parameters.AddWithValue("@Nome_Produto", prod.Nome);
+                command.Parameters.AddWithValue("@Fabricante", prod.Fabricante);
+                command.Parameters.AddWithValue("@CodigoBarras", prod.Fabricante);
+                command.Parameters.AddWithValue("@Preco", prod.Preco);
+                command.Parameters.AddWithValue("@Estoque", prod.Estoque);
+
+
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+
+
+        }
+
+        /// <summary>
+        /// Deleta os produtos (Delete)
+        /// </summary>
+        /// <param name="prod"></param>
+        public void DeleteProduct(Product prod)
         {
             using (var connection = new SqlConnection(stringconn))
             {
@@ -135,7 +181,8 @@ namespace ProductMVC.Repository
                     connection.Open();
                     command.ExecuteNonQuery();
 
-                }catch(Exception ex)
+                }
+                catch (Exception ex)
                 {
                     throw ex;
 
@@ -150,9 +197,70 @@ namespace ProductMVC.Repository
             }
         }
 
-        public void GetProductById(int id) { }
+        /// <summary>
+        /// Detalhamento de produtos (details)
+        /// </summary>
+        /// <param name="prod"></param>
+        public Product GetProductById(int id)
+        {
+
+            using (var connection = new SqlConnection(stringconn))
+            {
+                //@NomeCampoBanco - Sempre que invoca-lo, é preciso identificar nos parâmetros
+                 string query = "SELECT Id, Nome_Produto, Fabricante, CodigoBarras, Preco, Estoque" +
+                        " FROM Produtos WHERE Id=@Id";
+
+                SqlCommand command = new SqlCommand(query, connection);
+
+                command.Parameters.AddWithValue("@Id", id);
+
+                Product prod = null;
+
+                try
+                {
+                    connection.Open();
+
+                    using (var reader = command.ExecuteReader())
+                    {
+
+                        if (reader.HasRows)
+                        {
+                            //Enquanto houver valores a serem lidos
+                            if (reader.Read())
+                            {
+                                prod = new Product();
+                                prod.Id = (int)reader["Id"];
+                                prod.Nome = reader["Nome_Produto"].ToString();
+                                prod.Fabricante = reader["Fabricante"].ToString();
+                                prod.CodigoBarras = reader["CodigoBarras"].ToString();
+                                prod.Preco = (decimal)reader["Preco"];
+                                prod.Estoque = (int)reader["Estoque"];
+
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    connection.Close();
+                }
+
+                return prod;
+            }
+
+
+        }
+
+
     }
 
-
 }
+    
+
+
+
 

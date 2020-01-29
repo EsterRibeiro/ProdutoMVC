@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProductMVC.Models;
 using ProductMVC.Repository;
@@ -23,7 +19,15 @@ namespace ProductMVC.Controllers
         // GET: Product/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var produto = productRepository.GetProductById(id);
+
+            if (produto == null)
+            {
+                return StatusCode(404);
+            }
+
+
+            return View(produto);
         }
 
         // GET: Product/Create
@@ -63,13 +67,17 @@ namespace ProductMVC.Controllers
         // POST: Product/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit([Bind] Product produto)
         {
             try
             {
-                // TODO: Add update logic here
+                if (ModelState.IsValid)
+                {
+                    productRepository.UpdateProduct(produto);
+                    return RedirectToAction(nameof(Index));
+                }
 
-                return RedirectToAction(nameof(Index));
+                return View();
             }
             catch
             {
