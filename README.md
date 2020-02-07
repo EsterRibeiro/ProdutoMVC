@@ -20,5 +20,5 @@ Esse projeto foi feito com
 - .Net Core versão 3.1,
 - Persistência de banco de dados ADO.NET,
 - Banco de dados SQL Server,
-- Front-end gerado pelo Visual Studio (Razor).
+- Front-end com Razor.
 
